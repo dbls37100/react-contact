@@ -13,9 +13,7 @@ const contacts = [
     {
         id:2,
         name:"Aaron Perkins",
-        avatar: "https://randomuser.me/api/portraits/men/54.jpg",
-        online:
-        false
+        avatar: "https://randomuser.me/api/portraits/men/54.jpg"
     },
     {
         id:3,

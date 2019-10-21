@@ -1,27 +1,45 @@
-import React from 'react';
+import React,{Component} from 'react';
 import './Contact.css';
 
-function Contact (props) {
+
+class Contact extends Component{
+    constructor(props){
+        super(props)
+        this.state={
+            online : false
+        }
+    }
+render(){
     return (
         <figure className="Contact">
 <img className="avatar"
-  src={props.avatar}
-  alt={props.name} />
+  src={this.props.avatar}
+  alt={this.props.name} />
   
  
 <figcaption>
 <div className="name">
-   {props.name}
+   {this.props.name}
    </div>
-   <div>
-  <div className="status">
-        <span className={props.online ? "status-online":"status-offline"}></span>
-        <span>{props.online ? "online":"offline"}</span>
+  
+  <div className="status"
+   onClick= { event => {
+    this.state.online 
+      ? this.setState({online : false })
+      : this.setState({online : true });
+}}>
+  
+        <span className={this.state.online ? "status-online":"status-offline"}></span>
+        <span>{this.state.online ? "online":"offline"}</span>
+    
     </div>
-    </div>
+ 
+
+    
 </figcaption>
         </figure>
     );
+}
 }
 
 export default Contact;
