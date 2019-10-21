@@ -20,19 +20,25 @@ render(){
 <figcaption>
 <div className="name">
    {this.props.name}
-   </div>
-  
-  <div className="status"
-   onClick= { event => {
+</div>  
+<div className="status"
+    onClick= { event => {
     this.state.online 
-      ? this.setState({online : false })
-      : this.setState({online : true });
-}}>
-  
-        <span className={this.state.online ? "status-online":"status-offline"}></span>
-        <span>{this.state.online ? "online":"offline"}</span>
+    ? this.setState({online : false })
+    : this.setState({online : true });
+    }
+    }
+>
+<span className=
+    {this.state.online ? 
+    "status-online":"status-offline"
+    }>
+</span>
+<span>
+    {this.state.online ? "online":"offline"}
+</span>
     
-    </div>
+</div>
  
 
     

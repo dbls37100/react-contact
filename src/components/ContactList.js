@@ -20,14 +20,14 @@ const contacts = [
         name: "Ethel Castillo",
         avatar: "https://randomuser.me/api/portraits/men/90.jpg",
         online:
-        true
+        false
     },
     {
         id:4,
         name:"Cecil Wade",
         avatar:"https://randomuser.me/api/portraits/men/96.jpg",
         online:
-        false
+        true,
     },
     {
         id:5,
